@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title>TODO</title>
+    <link rel="stylesheet" href="todo.css">
+</head>
+
+<body>
+    <h3 class="heading">Your TODO :</h3>
+    <div class="top">
+        <input type="text" id="new_list_item">
+        <button class="btn" onclick="addItem()">Add Item</button>
+    </div>
+    <script type="text/javascript">
+        var listItems = ['Make portfolio', 'Watch WTC'];
+    </script>
+    <script type="text/javascript">
+        function addItem() {
+            var tempItem = document.getElementById("new_list_item").value;
+            listItems.push(tempItem);
+            displayList();
+            document.getElementById("new_list_item").value = ' ';
+        }
+        function deleteItem(delItem) {
+            for (var i = 0; i < listItems.length; i++) {
+                if (listItems[i] === delItem)
+                    listItems.splice(i, 1);
+            }
+            displayList();
+        }
+    </script>
+    <div  id="display">
+        <ul>
+            <script type="text/javascript">
+                displayList()
+                function displayList() {
+                    // listItems.forEach(displayList);
+                    document.getElementById("display").innerHTML = ''
+                    for(var i = 0; i < listItems.length; i++)
+                    {
+                        var item = listItems[i];
+                        document.getElementById("display").innerHTML += "<li class='one-item'>" + item + '<button class="btn" onclick="deleteItem(' + "'" + item + "'" +')">Delete</button>' + "</li>"
+                    }
+                }
+            </script>
+        </ul>
+    </div>
+</body>
+
+</html>

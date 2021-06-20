@@ -1,0 +1,28 @@
+body{
+    background-color: rgb(41, 40, 40);
+}
+.heading{
+    text-align: center;
+    color:rgb(241, 123, 123);
+    font-size: 40px;
+}
+.top{
+    text-align: center;
+}
+.btn{
+    background-color: cadetblue;
+    color: black;
+    border-radius: 20px;
+    margin-left: 10px;
+}
+#display{
+    text-align: left;
+    margin-top: 50px;
+    margin-left: 50%;
+    transform: translate(-11%);
+    color: blanchedalmond;
+}
+.one-item{
+    margin-top: 10px;
+}
+
